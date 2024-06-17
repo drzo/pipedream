@@ -204,7 +204,7 @@ export default {
       };
     },
     async fetchData() {
-      return this.snowflake.getRows(this.getSqlStatement());
+      return this.snowflake.executeQuery(this.getSqlStatement());
     },
     emit(event) {
       this.$emit(event, {
